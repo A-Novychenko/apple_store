@@ -1,0 +1,24 @@
+.content__box {
+  position: relative;
+  //   display: flex;
+  max-width: 538px;
+  min-height: 451px;
+}
+.content__box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  //   top: -100px;
+  bottom: 0px;
+  left: 600px;
+
+  width: 683px;
+  height: 987px;
+
+  background-image: url("../../../public/img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  //   z-index: -1;
+}

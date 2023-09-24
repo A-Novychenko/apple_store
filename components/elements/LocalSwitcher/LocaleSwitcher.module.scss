@@ -1,0 +1,18 @@
+.wrap {
+  display: flex;
+}
+
+.icon {
+  z-index: 0;
+}
+
+.list {
+  display: flex;
+  column-gap: 16px;
+
+  list-style: none;
+}
+
+.item {
+  z-index: 0;
+}

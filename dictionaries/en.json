@@ -1,0 +1,12 @@
+{
+  "server-component": {
+    "header": {
+      "links": {
+        "home": "Home",
+        "products": "Products",
+        "entertainment": "Entertainment",
+        "support": "Support"
+      }
+    }
+  }
+}

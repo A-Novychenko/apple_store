@@ -1,0 +1,12 @@
+{
+  "server-component": {
+    "header": {
+      "links": {
+        "home": "Домашня",
+        "products": "Товари",
+        "entertainment": "Розваги",
+        "support": "Підтримка"
+      }
+    }
+  }
+}
