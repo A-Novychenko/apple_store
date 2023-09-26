@@ -19,7 +19,7 @@ export const FilterProducts = () => {
       {btns &&
         btns.map((el, i) => (
           <li key={i}>
-            <button>{el}</button>
+            <button className={styles.btn}>{el}</button>
           </li>
         ))}
     </ul>

@@ -16,3 +16,21 @@
 .item {
   z-index: 0;
 }
+
+.active {
+  color: #464646;
+
+  font-size: 16px;
+
+  font-weight: 700;
+  line-height: 1.38;
+}
+.not_active {
+  color: #464646;
+
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 1.38;
+  text-decoration: none;
+}

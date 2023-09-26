@@ -1,19 +1,12 @@
-.btn_wrap {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-}
-
 .btn {
   display: flex;
-  width: 140px;
   height: 48px;
   padding: 0px 24px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 0;
-  line-height: 0;
+
+  color: #fff;
 
   border-radius: 12px;
   border: 1px solid #fff;
@@ -26,10 +19,4 @@
     linear-gradient(to top right, #181818 0%, #464646 50%) top right / 50% 50%
       no-repeat;
   box-shadow: 0px 4px 24px -4px rgba(0, 0, 0, 0.16);
-
-  color: #e8e8e8;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.38;
-  text-transform: capitalize;
 }

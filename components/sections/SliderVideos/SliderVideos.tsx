@@ -13,6 +13,8 @@ import "swiper/scss";
 // import "swiper/pagination";
 // import "swiper/css/effect-fade";
 
+import styles from "./SliderVideos.module.scss";
+
 const data = [
   {
     id: "d3s2f1dww32f1",
@@ -67,49 +69,74 @@ const data = [
 
 export const SliderVideos = () => {
   return (
-    <section>
-      <Swiper
-        slidesPerView={5}
-        // slideActiveClass="active_slide_custom"
-        initialSlide={2}
-        spaceBetween={24}
-        centeredSlides
-        width={1320}
-        // centeredSlidesBounds
-        edgeSwipeThreshold={0}
-        grabCursor
-        resistance={false}
-        slideToClickedSlide
-      >
-        {data &&
-          data.map(({id, name, img, url, genre}) => (
-            <SwiperSlide key={id}>
-              {({isActive}) => (
-                <div
-                  className={`swiper-slide ${
-                    isActive ? "active_slide_custom" : "not_active_slide_custom"
-                  }`}
-                >
-                  <Image src={`${img}`} alt={name} width={872} height={500} />
-                  <div>
-                    <p>{name}</p>
-                    <p>{genre}</p>
-                  </div>
-                  <Link href={url}>
-                    <span>stream Now</span>
+    <section className={styles.section}>
+      <div className="container">
+        <Swiper
+          slidesPerView={5}
+          // slideActiveClass="active_slide_custom"
+          initialSlide={2}
+          spaceBetween={24}
+          centeredSlides
+          // width={1320}
+          // centeredSlidesBounds
+          edgeSwipeThreshold={0}
+          grabCursor
+          resistance={false}
+          slideToClickedSlide
+          // height={480}
+        >
+          {data &&
+            data.map(({id, name, img, url, genre}) => (
+              <SwiperSlide key={id}>
+                {({isActive}) => (
+                  <div
+                    style={{width: isActive ? "872px !important" : "88px"}}
+                    className={`swiper-slide ${
+                      isActive
+                        ? "active_slide_custom"
+                        : "not_active_slide_custom"
+                    }`}
+                  >
                     <Image
-                      src={playIcon}
-                      alt="play icon"
-                      width={24}
-                      height={24}
+                      src={`${img}`}
+                      alt={name}
+                      width={isActive ? 872 : 88}
+                      height={480}
+                      className={isActive ? styles.img__active : styles.img}
                     />
-                  </Link>
-                </div>
-              )}
-              {/* </div> */}
-            </SwiperSlide>
-          ))}
-      </Swiper>
+                    {isActive && (
+                      <div className={styles.name_box}>
+                        <p className={styles.name}>{name}</p>
+                        <div>
+                          <p className={styles.genre}>{genre}</p>
+                        </div>
+                      </div>
+                    )}
+                    {!isActive && (
+                      <div className={styles.name_vertical_wrap}>
+                        <p className={styles.name_vertical}>{name}</p>
+                      </div>
+                    )}
+                    {isActive && (
+                      <div className={styles.link_wrap}>
+                        <Link href={url} className={styles.link}>
+                          <span className={styles.btn_text}>stream Now</span>
+                          <Image
+                            src={playIcon}
+                            alt="play icon"
+                            width={24}
+                            height={24}
+                          />
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                )}
+                {/* </div> */}
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

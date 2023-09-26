@@ -41,7 +41,7 @@ export default function LocaleSwitcher() {
                     : styles.not_active
                 }
               >
-                {locale === "uk" ? "ua" : locale}
+                {locale === "uk" ? "Ukraine, Ukrainian" : "USA, English"}
               </Link>
             </li>
           );

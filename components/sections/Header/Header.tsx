@@ -13,45 +13,47 @@ import styles from "./Header.module.scss";
 export const Header = async ({lang}: {lang: Locale}) => {
   const dictionary = await getDictionary(lang);
   return (
-    <header>
-      <div className={styles.wrap}>
-        <nav>
-          <ul className={styles.nav__list}>
-            <li>
-              <Link href={`/${lang}`}>
-                {dictionary["server-component"].header.links.home}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lang}`}>
-                {dictionary["server-component"].header.links.products}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lang}`}>
-                {dictionary["server-component"].header.links.entertainment}
-              </Link>
-            </li>
-            <li>
-              <Link href={`/${lang}`}>
-                {dictionary["server-component"].header.links.support}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          <Image
-            src={logoIcon}
-            alt={lang === "uk" ? "Логотип 'apple'" : "Logo 'apple'"}
-            width={48}
-            height={48}
-          />
-        </div>
-        <HeaderSearch />
+    <header className={styles.header}>
+      <div className="container">
+        <div className={styles.wrap}>
+          <nav className={styles.nav}>
+            <ul className={styles.nav__list}>
+              <li>
+                <Link href={`/${lang}`} className={styles.link}>
+                  {dictionary["server-component"].header.links.home}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}`} className={styles.link}>
+                  {dictionary["server-component"].header.links.products}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}`} className={styles.link}>
+                  {dictionary["server-component"].header.links.entertainment}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${lang}`} className={styles.link}>
+                  {dictionary["server-component"].header.links.support}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <Image
+              src={logoIcon}
+              alt={lang === "uk" ? "Логотип 'apple'" : "Logo 'apple'"}
+              width={48}
+              height={48}
+            />
+          </div>
 
-        <div>
-          <CartBtn />
-          <ProfileBtn />
+          <div className={styles.interactive__box}>
+            <HeaderSearch />
+            <CartBtn />
+            <ProfileBtn />
+          </div>
         </div>
       </div>
     </header>

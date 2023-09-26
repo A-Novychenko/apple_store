@@ -1,24 +1,137 @@
 .content__box {
-  position: relative;
   //   display: flex;
   max-width: 538px;
   min-height: 451px;
 }
-.content__box::after {
-  content: "";
-  display: block;
-  position: absolute;
-  //   top: -100px;
-  bottom: 0px;
-  left: 600px;
+.wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 303px;
 
-  width: 683px;
-  height: 987px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    //   top: -100px;
+    bottom: 0px;
+    right: 0;
 
-  background-image: url("../../../public/img/hero.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    width: 683px;
+    height: 1138px;
 
-  //   z-index: -1;
+    background-image: url("../../../public/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  font-size: 48px;
+
+  font-weight: 600;
+
+  text-transform: capitalize;
+
+  background: radial-gradient(
+    1662.48% 205.49% at 53.54% -74.56%,
+    #181818 40.24%,
+    #a3a3a3 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.decoration_first_title_bgc {
+  position: relative;
+
+  display: inline-flex;
+  margin-left: 16px;
+
+  line-height: 0;
+}
+
+.bgcIcon {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 4px;
+}
+
+.decoration_first_title_icon {
+  &::after {
+    position: absolute;
+
+    display: inline-flex;
+    content: "";
+
+    width: 135px;
+    height: 53px;
+
+    top: 6px;
+    left: 0;
+
+    border-radius: 50px;
+    border: 1px solid #464646;
+    background: url("../../../public/img/Rectangle.png"),
+      lightgray 50% / cover no-repeat;
+
+    z-index: 100;
+  }
+}
+
+.decoration_last_title_bgc {
+  position: relative;
+
+  display: inline-flex;
+  margin-right: 16px;
+
+  line-height: 0;
+}
+
+.bgcIcon_last {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 4px;
+}
+
+.decoration_last_title_icon {
+  &::after {
+    position: absolute;
+
+    display: inline-flex;
+    content: "";
+
+    width: 93px;
+    height: 53px;
+
+    top: 6px;
+    right: 0;
+
+    border-radius: 50px;
+    border: 1px solid #464646;
+    background: url("../../../public/img/Rectangle_last.png"),
+      lightgray 50% / cover no-repeat;
+
+    z-index: 100;
+  }
+}
+
+.descr {
+  padding: 48px 0;
+
+  color: #464646;
+
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 1.37;
+  text-transform: capitalize;
 }

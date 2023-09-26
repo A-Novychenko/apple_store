@@ -4,6 +4,7 @@ import {Hero} from "@/components/sections/Hero/Hero";
 import {Gallery} from "@/components/sections/Gallery/Gallery";
 import {Products} from "@/components/sections/Products/Products";
 import {SliderVideos} from "@/components/sections/SliderVideos/SliderVideos";
+import {LinkBar} from "@/components/sections/LinkBar/LinkBar";
 
 export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
   const dictionary = await getDictionary(lang);
@@ -17,6 +18,7 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
       <Gallery />
       <Products />
       <SliderVideos />
+      <LinkBar />
     </>
   );
 }
