@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={SFproText.className}>
         <Header lang={lang} />
         {children}
-        <Footer lang={lang} />
+        {/* <Footer lang={lang} /> */}
       </body>
     </html>
   );

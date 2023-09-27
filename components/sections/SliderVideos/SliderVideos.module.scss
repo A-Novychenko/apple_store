@@ -5,12 +5,17 @@
   position: absolute !important;
   top: 0;
   left: 0;
-  width: 872px !important;
-  height: 480px !important;
+  width: 100% !important;
 
-  border: 5px solid white;
-
+  min-height: 50vw !important;
+  max-height: 480px !important;
   z-index: -1;
+  @media screen and (min-width: 1440px) {
+    width: 872px !important;
+    height: 480px !important;
+
+    border: 5px solid white;
+  }
 }
 
 .img {
@@ -89,12 +94,18 @@
 
 .link_wrap {
   position: absolute;
-  bottom: 0;
+  top: 30vw;
   right: 0;
   display: inline-flex;
   background-color: #ffffff;
   border-top-left-radius: 8px;
   padding: 8px;
+
+  @media screen and (min-width: 1440px) {
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .link {

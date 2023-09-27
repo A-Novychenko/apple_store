@@ -1,7 +1,11 @@
 .btn_wrap {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 2px;
+  right: 2px;
+  @media screen and (min-width: 350px) {
+    bottom: 24px;
+    right: 24px;
+  }
 }
 
 .btn {

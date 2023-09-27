@@ -12,7 +12,7 @@ export const Hero = () => {
       <div className="container">
         <div className={styles.wrap}>
           <div className={styles.content__box}>
-            <h2>
+            <h2 className={styles.title_main}>
               <span className={styles.title}>
                 Elevating Life
                 <span className={styles.decoration_first_title_bgc}>

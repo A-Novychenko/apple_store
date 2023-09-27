@@ -1,13 +1,12 @@
 type Dictionaries = {
   "server-component": {
-    header: {links: DictionariesLinks};
+    header: {links: HeaderLinks};
   };
 };
 
-type Header = {
-  header: DictionariesLinks;
-};
-
-type DictionariesLinks = {
+type HeaderLinks = {
   home: string;
+  products: string;
+  entertainment: string;
+  support: string;
 };

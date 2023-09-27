@@ -2,16 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {Navigation, Pagination, A11y} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-// import {EffectFade} from "swiper/modules";
 
 import playIcon from "@/public/icons/play_circle.svg";
 
 import "swiper/scss";
-// import "swiper/navigation";
-// import "swiper/pagination";
-// import "swiper/css/effect-fade";
 
 import styles from "./SliderVideos.module.scss";
 
@@ -72,18 +67,15 @@ export const SliderVideos = () => {
     <section className={styles.section}>
       <div className="container">
         <Swiper
-          slidesPerView={5}
-          // slideActiveClass="active_slide_custom"
+          // slidesPerView={5}
           initialSlide={2}
           spaceBetween={24}
           centeredSlides
-          // width={1320}
-          // centeredSlidesBounds
           edgeSwipeThreshold={0}
           grabCursor
           resistance={false}
           slideToClickedSlide
-          // height={480}
+          breakpoints={{0: {slidesPerView: 1}, 1440: {slidesPerView: 5}}}
         >
           {data &&
             data.map(({id, name, img, url, genre}) => (

@@ -1,0 +1,47 @@
+.burgerBtn {
+  display: inline-block;
+  line-height: 0;
+  margin: 0;
+  padding: 13;
+  border: none;
+  background-color: transparent;
+
+  fill: #181818;
+  stroke: #181818;
+
+  cursor: pointer;
+}
+
+.mob_menu {
+  position: fixed;
+  top: 50px;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  z-index: 200;
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.nav__list {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 12px;
+
+  text-decoration: none;
+  color: #464646;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
