@@ -1,12 +1,11 @@
 import {Header} from "@/components/sections/Header/Header";
-import "./../globals.css";
 import type {Metadata} from "next";
-// import { Inter } from "next/font/google";
+
 import {SFproText} from "@/fonts/font";
 import {Locale} from "@/i18n-config";
 import {Footer} from "@/components/sections/Footer/Footer";
 
-// const inter = Inter({subsets: ["latin"]});
+import "./../globals.css";
 
 export const metadata: Metadata = {
   title: "Apple store",
@@ -25,7 +24,7 @@ export default function RootLayout({
       <body className={SFproText.className}>
         <Header lang={lang} />
         {children}
-        {/* <Footer lang={lang} /> */}
+        <Footer lang={lang} />
       </body>
     </html>
   );
