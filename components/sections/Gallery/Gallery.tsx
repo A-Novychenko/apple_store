@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {GalleryList} from "@/components/elements/Gallery/GalleryList/GalleryList";
 import arrowRight from "@/public/icons/arrow_right.svg";
 
 import styles from "./Gallery.module.scss";
-import {GalleryDetailBtn} from "@/components/elements/Gallery/GalleryDetailBtn/GalleryDetailBtn";
-import {GalleryList} from "@/components/elements/Gallery/GalleryList/GalleryList";
 
 export const Gallery = async () => {
+  const {BASE_URL} = process.env;
+
   const res = await fetch(
-    "https://apple-store-delta.vercel.app/api/getgallery/",
+    `${BASE_URL}/api/getgallery/`,
 
     {
       headers: {
@@ -19,7 +20,7 @@ export const Gallery = async () => {
     }
   );
 
-  const data = await res.json();
+  const {data} = await res.json();
 
   return (
     <section className={styles.section}>

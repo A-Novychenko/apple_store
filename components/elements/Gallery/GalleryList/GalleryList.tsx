@@ -15,7 +15,7 @@ export const GalleryList = ({data}: {data: GalleryListProps}) => {
   return (
     <ul className={styles.gallery__card_list}>
       {data &&
-        data.map(({name, id, price, img}) => (
+        data?.map(({name, id, price, img}) => (
           <li key={id}>
             <div className={styles.img_wrap}>
               <Image

@@ -10,7 +10,7 @@ export async function GET() {
       mode: "no-cors",
     }
   );
-  const {data} = await res.json();
+  const data = await res.json();
 
   return NextResponse.json({
     status: 200,
