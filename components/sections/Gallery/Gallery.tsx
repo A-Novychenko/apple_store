@@ -10,6 +10,7 @@ import {GalleryList} from "@/components/elements/Gallery/GalleryList/GalleryList
 export const Gallery = async () => {
   const res = await fetch(
     "https://apple-store-delta.vercel.app/api/getgallery/",
+
     {
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +19,7 @@ export const Gallery = async () => {
     }
   );
 
-  const {data} = await res.json();
+  const data = await res.json();
 
   return (
     <section className={styles.section}>
