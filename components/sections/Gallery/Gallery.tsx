@@ -34,7 +34,6 @@ export const Gallery = async () => {
               <Image src={arrowRight} alt="arrow" width={24} height={24} />
             </Link>
           </div>
-
           <GalleryList data={data} />
         </div>
       </div>

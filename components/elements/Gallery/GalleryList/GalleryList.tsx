@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import {GalleryDetailBtn} from "../GalleryDetailBtn/GalleryDetailBtn";
 
 import i14pro from "@/public/img/ai14p.jpg";
@@ -24,7 +25,6 @@ export const GalleryList = ({data}: {data: GalleryListProps}) => {
                 height={344}
                 className={styles.img}
               />
-
               <div className={styles.label}>
                 <p className={styles.name}>{name}</p>
                 <p className={styles.price}>{`From $${price}`}</p>
