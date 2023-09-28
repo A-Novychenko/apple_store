@@ -1,6 +1,6 @@
 import {NextResponse} from "next/server";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const res = await fetch(
       "https://6403b8063bdc59fa8f2bad68.mockapi.io/gallery/",
